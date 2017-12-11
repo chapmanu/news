@@ -21,3 +21,8 @@
 /yarn-error.log
 
 .byebug_history
+
+# Sensitive Files
+# Copy dist versions on install.
+/config/database.yml
+/config/secrets.yml
