@@ -1,5 +1,5 @@
 class HomesControllerTest < ActionDispatch::IntegrationTest
-  test "expect home page" do
+  test "expects to load home page" do
     get root_url
     assert_response :success
   end
