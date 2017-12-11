@@ -30,7 +30,7 @@ Metrics/ClassLength:
 
 # No space makes the method definition shorter and differentiates
 # from a regular assignment.
-Style/SpaceAroundEqualsInParameterDefault:
+Layout/SpaceAroundEqualsInParameterDefault:
   EnforcedStyle: no_space
 
 # Do not enforce string literals.
@@ -80,7 +80,7 @@ Style/RaiseArgs:
 
 # Indenting the chained dots beneath each other is not supported by this cop,
 # see https://github.com/bbatsov/rubocop/issues/1633
-Style/MultilineOperationIndentation:
+Layout/MultilineOperationIndentation:
   Enabled: false
 
 # Fail is an alias of raise. Avoid aliases, it's more cognitive load for no gain.
@@ -103,7 +103,7 @@ Lint/HandleExceptions:
 
 # No trailing space differentiates better from the block:
 # foo} means hash, foo } means block.
-Style/SpaceInsideHashLiteralBraces:
+Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 
 # { ... } for multi-line blocks is okay, follow Weirichs rule instead:
@@ -134,10 +134,6 @@ Lint/ShadowingOuterLocalVariable:
 Style/Documentation:
   Enabled: false
 
-# This is just silly. Calling the argument `other` in all cases makes no sense.
-Naming/BinaryOperatorParameterName:
-  Enabled: false
-
 # There are valid cases, for example debugging Cucumber steps,
 # also they'll fail CI anyway
 Lint/Debugger:
@@ -145,4 +141,11 @@ Lint/Debugger:
 
 # Style preference
 Style/MethodDefParentheses:
+  Enabled: false
+
+# Ignore missing magic comments.
+# For more information see:
+# https://stackoverflow.com/a/37799399/6763239
+# https://github.com/bbatsov/rubocop/issues/3284#issuecomment-230407753
+Style/FrozenStringLiteralComment:
   Enabled: false
