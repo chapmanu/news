@@ -21,17 +21,17 @@ Chapman University's news and stories website.
 
 ## Development
 ### Running local server
-To start the local server, use webrick (puma is not configured to run locally):
+To start the local server:
 
-    rails s webrick
+    bundle exec rails s
 
 Send browser to http://localhost:3000
 
 ### Running Tests
 All tests:
 
-    rake test
+    bundle exec rake test
 
 Individual test file:
 
-    rake test TEST=test/controllers/ping_controller_test.rb
+    bundle exec rake test TEST=test/controllers/ping_controller_test.rb
