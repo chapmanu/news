@@ -1,3 +1,5 @@
+require 'test_helper'
+
 class HomeControllerTest < ActionDispatch::IntegrationTest
   test "expects to load home page" do
     get root_url
