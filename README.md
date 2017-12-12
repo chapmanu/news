@@ -14,6 +14,10 @@ Chapman University's news and stories website.
     cd newsroom
     bundle install
 
+    # Copy dist versions of config files into place
+    cp -v config/secrets.yml{.dist,}
+    cp -v config/database.yml{.dist,}
+
 
 ## Development
 ### Running local server
