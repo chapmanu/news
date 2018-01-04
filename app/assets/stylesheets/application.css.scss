@@ -15,7 +15,8 @@
  */
 
 $default-fonts: "proxima-nova", verdana, sans-serif;
-$chapman-font-color: #2f2f2f;
+$chapman-black: #2f2f2f;
+$chapman-red: #98002e;
 
 // Default styles
 html {
@@ -34,8 +35,35 @@ body {
   line-height: initial;
   margin: 0;
   padding: 0;
-  color: $chapman-font-color;
+  color: $chapman-black;
   font-family: $default-fonts;
+}
+
+::-moz-selection, ::selection {
+  background: $chapman-red;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+a {
+  color: $chapman-red;
+  text-decoration: none;
+  &:visited {
+    color: $chapman-red;
+    border-bottom: none;
+  }
+  &:hover {
+    color: #BB223C;
+    border-bottom: none;
+    text-decoration: underline;
+  }
+  &:focus {
+    outline: thin dotted;
+  }
+  &:hover, &:active {
+    outline: 0;
+    text-decoration: none;
+  }
 }
 
 * {
