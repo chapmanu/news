@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+$default-fonts: "proxima-nova", verdana, sans-serif;
+$chapman-font-color: #2f2f2f;
+
+// Default styles
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: $default-fonts;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  line-height: initial;
+  margin: 0;
+  padding: 0;
+  color: $chapman-font-color;
+  font-family: $default-fonts;
+}
+
+* {
+  box-sizing: inherit;
+}
