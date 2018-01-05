@@ -1,0 +1,64 @@
+@import "variables";
+@import "header";
+@import "footer";
+
+// Application-wide default styles
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: $default-fonts;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  line-height: initial;
+  margin: 0;
+  padding: 0;
+  color: $black;
+  font-family: $default-fonts;
+}
+
+::-moz-selection, ::selection {
+  background: $chapman-red;
+  color: $white;
+  text-shadow: none;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+p, h1, h2, h3, h4 {
+  margin: 0;
+}
+
+a {
+  color: $chapman-red;
+  text-decoration: none;
+  &:visited {
+    color: $chapman-red;
+    border-bottom: none;
+  }
+  &:hover {
+    color: #BB223C;
+    border-bottom: none;
+    text-decoration: underline;
+  }
+  &:focus {
+    outline: thin dotted;
+  }
+  &:hover, &:active {
+    outline: 0;
+    text-decoration: none;
+  }
+}
+
+* {
+  box-sizing: inherit;
+}

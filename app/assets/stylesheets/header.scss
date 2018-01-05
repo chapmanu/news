@@ -107,7 +107,7 @@ html.omni-nav-v2 {
               white-space: nowrap;
               vertical-align: middle;
               padding: 1px 0 0 20px;
-              border-left: 1px solid #2f2f2f;
+              border-left: 1px solid $black;
               font-size: 18px;
               font-family: 'minion-pro', serif;
               font-style: italic;
@@ -162,7 +162,7 @@ html.omni-nav-v2 {
           }
 
           @include breakpoint($bp-tablet) {
-            background-color: #2f2f2f;
+            background-color: $black;
             margin: 0 auto;
             width: 60px;
 
@@ -202,7 +202,7 @@ html.omni-nav-v2 {
               top: $primary-nav-height;
               right: -20px;
               width: 175px;
-              background-color: #2f2f2f;
+              background-color: $black;
               text-align: left;
               z-index: 667;
               -webkit-box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.2);
@@ -269,7 +269,7 @@ html.omni-nav-v2 {
             line-height: $base-line-height;
 
             a {
-              color: #98002e;
+              color: $chapman-red;
             }
           }
         }
