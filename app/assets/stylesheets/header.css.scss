@@ -6,6 +6,10 @@
 //make room at top of page for omni-nav
 html.omni-nav-v2 {
   padding-top: 60px;
+
+  @include breakpoint($bp-tablet) {
+    padding-top: 120px;
+  }
 }
 
 #omni-nav-v2 {
@@ -39,10 +43,12 @@ html.omni-nav-v2 {
     border-bottom: 1px solid #999999;
     z-index: 667; //needs to be on top of search results overlay
 
-    .cu-logo-wrapper {
-      display: table;
-      height: $primary-nav-height;
+    @include breakpoint($bp-tablet) {
+      padding: 0;
+      height: 120px;
     }
+
+
 
     .primary-logo {
       display: table-cell;
@@ -55,24 +61,15 @@ html.omni-nav-v2 {
         margin: 0;
       }
 
-      svg {
-        display: block;
-
-        &.chapman-logo {
-          width: 190px;
-          height: 32px;
-
-          @include breakpoint($bp-tablet) {
-            width: 256px;
-          }
-        }
-      }
+      // Default Chapman logo
+      svg { display: block; }
     }
 
     .nav-container {
       display: inline-block;
       float: left;
 
+      // Hamburger, search icon, login icon
       .primary-nav-icon {
         cursor: pointer;
         height: $primary-nav-height;
@@ -84,6 +81,39 @@ html.omni-nav-v2 {
         }
       }
 
+      &.logo-container {
+        svg.chapman-logo {
+          width: 190px;
+          height: 32px;
+
+          @include breakpoint($bp-tablet) {
+            width: 256px;
+          }
+        }
+
+        .cu-logo-wrapper {
+          height: $primary-nav-height;
+          display: table;
+
+          @include breakpoint($bp-tablet) {
+            height: 32px;
+            line-height: 32px;
+          }
+        }
+
+        @include breakpoint($bp-tablet) {
+          margin: 13px 0px;
+          padding: 0px;
+
+          .cu-logo-wrapper {
+            a.branded-logo {
+              vertical-align: baseline;
+              white-space: nowrap;
+            }
+          }
+        }    
+      }
+
       &.left-nav-container {
         padding-right: $base-spacing;
 
@@ -93,6 +123,10 @@ html.omni-nav-v2 {
           svg.hamburger-icon {
             vertical-align: text-bottom;
           }
+        }
+
+        @include breakpoint($bp-tablet) {
+          padding-left: $base-spacing;
         }
       }
 
@@ -121,6 +155,34 @@ html.omni-nav-v2 {
             &.icon-open-search.hide,
             &.icon-close-search.hide {
               display: none;
+            }
+          }
+
+          @include breakpoint($bp-tablet) {
+            background-color: #2f2f2f;
+            margin: 0 auto;
+            width: 60px;
+
+            .nav-icon-text {
+              display: none;
+            }
+
+            &.utility-nav-trigger {
+              border-right: 1px solid $primary-nav-border-color;
+
+              .primary-nav-icon {
+                margin-right: 0;
+              }
+            }
+
+            a.primary-nav-icon {
+              display: inline-block;
+              position: relative;
+
+              svg {
+                // On mobile, fill is black
+                fill: $white;
+              }
             }
           }
 
@@ -176,6 +238,53 @@ html.omni-nav-v2 {
                 margin-right: 9px;
               }
             }
+          }
+        }
+      }
+
+      /* GLOBAL NAV
+      ---------------------------------------- */
+      &.global-nav {
+        display: none;
+        padding: 14px $base-spacing;
+        background-color: $white;
+        border-top: 1px solid $primary-nav-border-color;
+
+        a { color: $black; }
+
+        @include breakpoint($bp-tablet) {
+          display: block;
+          width: 100%;
+          border-bottom: 1px solid #8a8a8a;
+        }
+
+        .global-nav-links {
+          display: table;
+          height: 32px;
+        }
+
+        .primary-link {
+          display: table-cell;
+          position: relative;
+          vertical-align: middle;
+          padding: 0 9px;
+          border-right: 1px solid $primary-nav-border-color;
+          cursor: pointer;
+          line-height: 20px;
+
+          &:first-of-type {
+            padding-left: 0;
+          }
+
+          &:last-of-type {
+            padding-right: 0;
+            border-right: none;
+          }
+
+          & > a {
+            text-transform: uppercase;
+            font-size: 16px;
+            white-space: nowrap;
           }
         }
       }
