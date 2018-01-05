@@ -187,6 +187,15 @@ html.omni-nav-v2 {
           }
 
           &.login-trigger {
+            &:hover {
+              .login-menu { 
+                visibility: visible;
+                opacity: 1;
+                transition: opacity 0.3s ease-in;
+                -webkit-transition: opacity 0.3s ease-in;
+              }
+            }
+
             .login-menu {
               visibility: hidden;
               opacity: 0;
