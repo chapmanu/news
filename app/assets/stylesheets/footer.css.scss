@@ -1,0 +1,91 @@
+@import "variables";
+
+#footer {
+  background: $black;
+  color: $white;
+  height: auto;
+
+  .section {
+    padding: 10px 25px;
+
+    ul.social-list,
+    ul.menu-list {
+      list-style-type: none;
+    }
+
+    .footer-title p,
+    .footer-subtitle p {
+      font-family: "futura-pt-condensed", arial, sans-serif;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    // List item links and static address text
+    .menu-list li a,
+    .address-text p,
+    .copyright {
+      color: $white;
+      font-family: "proxima-nova", verdana, sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .footer-address {
+      // Space between title and top of footer
+      padding-top: 20px;
+      
+      .footer-title {
+        font-size: 40px;
+        line-height: 44px;
+      }
+
+      // Space between address and copyright
+      .address-text {
+        margin-bottom: 10px;
+      }
+    }
+
+    .footer-menu {
+      .footer-subtitle {
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      ul.menu-list li {
+        margin: 0 0 4px 0;
+      }
+    }
+
+    .footer-social {
+      ul.social-list {
+        // Set static width to force list items onto 2 equal lines of 4
+        width: 200px;
+        display: inline-block;
+
+        li {
+          display: inline-block;
+          float: left;
+          text-align: center;
+          width: 35px;
+          border: none;
+          // Has to be 0px on the left in order to line up with other footer content
+          margin: 0 15px 15px 0;
+
+          a {
+            display: block;
+            font-size: 0px;
+            line-height: 35px;
+            border: 1px solid $white;
+          }
+
+          svg {
+            width: $square-icon-size;
+            height: $square-icon-size;
+            vertical-align: middle;
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+}
