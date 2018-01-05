@@ -21,15 +21,6 @@ html.omni-nav-v2 {
   // Needs to be high enough to put off-canvas-nav on top of anything else on page.
   z-index: 1000;
 
-  /* BRANDED
-  ---------------------------------------- */
-
-  &.branded {
-    .secondary-logo {
-      display: none;
-    }
-  }
-
   /* PRIMARY NAV
   ---------------------------------------- */
   #primary-nav {
@@ -48,8 +39,6 @@ html.omni-nav-v2 {
       height: 120px;
     }
 
-
-
     .primary-logo {
       display: table-cell;
       vertical-align: middle;
@@ -63,6 +52,10 @@ html.omni-nav-v2 {
 
       // Default Chapman logo
       svg { display: block; }
+
+      @include breakpoint($bp-tablet) {
+        padding-right: 20px;
+      }
     }
 
     .nav-container {
@@ -95,6 +88,8 @@ html.omni-nav-v2 {
           height: $primary-nav-height;
           display: table;
 
+          a.branded-logo { display: none; }
+
           @include breakpoint($bp-tablet) {
             height: 32px;
             line-height: 32px;
@@ -107,8 +102,16 @@ html.omni-nav-v2 {
 
           .cu-logo-wrapper {
             a.branded-logo {
+              display: table-cell;
               vertical-align: baseline;
               white-space: nowrap;
+              vertical-align: middle;
+              padding: 1px 0 0 20px;
+              border-left: 1px solid #2f2f2f;
+              font-size: 18px;
+              font-family: 'minion-pro', serif;
+              font-style: italic;
+              color: $black;
             }
           }
         }    
