@@ -23,7 +23,14 @@ body {
   font-family: $default-fonts;
 }
 
-::-moz-selection, ::selection {
+// Selection rules cannot be combined here
+// see Stack Overflow question: https://stackoverflow.com/questions/5302172/firefox-moz-selection-selector-bug-is-there-a-workaround/5302221#5302221
+::-moz-selection {
+  background: $chapman-red;
+  color: $white;
+  text-shadow: none;
+}
+::selection {
   background: $chapman-red;
   color: $white;
   text-shadow: none;
