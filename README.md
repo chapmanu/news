@@ -35,3 +35,14 @@ All tests:
 Individual test file:
 
     bundle exec rake test TEST=test/controllers/ping_controller_test.rb
+
+### Server Provisioning
+Webserver provisioning is automated with [Ansible](https://www.ansible.com/).
+
+Playbooks must be run from the `ansible` directory:
+
+    cd devops/ansible
+
+To provision staging server:
+
+    ansible-playbook webserver.yml -i hosts/staging
