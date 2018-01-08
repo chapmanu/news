@@ -15,9 +15,9 @@ Chapman University's news and stories website.
     bundle install
 
     # Copy dist versions of config files into place
-    cp -v config/secrets.yml{.dist,}
     cp -v config/database.yml{.dist,}
 
+The master encryption key can be found in PassPack. Place the key under `config/` in a new file called `secrets.yml.key`. You will need this key to run tests.
 
 ## Development
 ### Running local server

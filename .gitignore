@@ -25,4 +25,6 @@
 # Sensitive Files
 # Copy dist versions on install.
 /config/database.yml
-/config/secrets.yml
+
+# Ignore encrypted secrets key file.
+config/secrets.yml.key
