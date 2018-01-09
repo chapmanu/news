@@ -1,9 +1,5 @@
-# Use socket file rather port for reverse proxy.
+# Use socket file rather than port for reverse proxy.
 bind 'unix:///var/www/news/shared/tmp/sockets/puma.sock'
-
-# Specifies the `port` that Puma will listen on to receive requests; default is 3000.
-#
-# port        ENV.fetch("PORT") { 3000 }
 
 # Config / Log Paths
 directory '/var/www/news/current'
@@ -14,7 +10,7 @@ stdout_redirect '/var/www/news/current/log/puma.error.log', '/var/www/news/curre
 
 # Specifies the `environment` that Puma will run in.
 #
-environment ENV.fetch("RAILS_ENV") { "production" }
+environment ENV.fetch("RAILS_ENV") { "staging" }
 
 # Puma can serve each request in a thread from an internal thread pool.
 # The `threads` method setting takes two numbers: a minimum and maximum.

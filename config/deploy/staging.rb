@@ -1,11 +1,4 @@
-
 server "news-staging.chapman.edu", user: "deploy", roles: %w{web}
-
-# Rbenv is under user.
-set :rbenv_type, :user
-set :rbenv_ruby, '2.4.1'
-set :rbenv_map_bins, %w{rake gem bundle ruby rails}
-set :rbenv_roles, [:web]
 
 # The git branch for staging
 def current_git_branch

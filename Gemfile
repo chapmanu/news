@@ -12,7 +12,7 @@ gem 'sqlite3'
 
 # Use Puma as the app server
 # Version 3.10.0+ for this issue: https://github.com/seuros/capistrano-puma/issues/237
-gem 'puma', '>= 3.10.0', group: [:production, :staging]
+gem 'puma', '>= 3.10.0', group: [:staging]
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Rubocop must be available in all groups, otherwise throws "LoadError: cannot load such file -- rubocop/rake_task" on deploy
+# See same issue in Imposter: https://github.com/chapmanu/imposter/issues/4
 # Static Code Analyzer
 gem 'rubocop', require: false
 
