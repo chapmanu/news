@@ -1,0 +1,7 @@
+---
+env: staging
+
+nginx_server_name_list:
+  - newss-mkt-wb01.chapman.edu
+  - news-staging.chapman.edu
+  - www.news-staging.chapman.edu
