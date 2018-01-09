@@ -13,7 +13,7 @@ set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, [:web]
 
 # Linked paths
-set :linked_files,     %w{config/secrets.yml.key}
+set :linked_files,     %w{config/secrets.yml.key config/database.yml}
 set :linked_dirs,      %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # Puma configuration: https://github.com/seuros/capistrano-puma
