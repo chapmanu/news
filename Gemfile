@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 # Rubocop must be available in all groups, otherwise throws "LoadError: cannot load such file -- rubocop/rake_task" on deploy
 # See same issue in Imposter: https://github.com/chapmanu/imposter/issues/4
 # Static Code Analyzer
-gem 'rubocop', require: false
+gem 'rubocop'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
