@@ -10,7 +10,7 @@ stdout_redirect '/var/www/news/current/log/puma.error.log', '/var/www/news/curre
 
 # Specifies the `environment` that Puma will run in.
 #
-environment ENV.fetch("RAILS_ENV") { "staging" }
+environment ENV.fetch("RAILS_ENV") { "production" }
 
 # Puma can serve each request in a thread from an internal thread pool.
 # The `threads` method setting takes two numbers: a minimum and maximum.
