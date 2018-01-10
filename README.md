@@ -17,7 +17,7 @@ Chapman University's news and stories website.
     # Copy dist versions of config files into place
     cp -v config/database.yml{.dist,}
 
-The master encryption key can be found in Passpack. Place the key under `config/` in a new file called `secrets.yml.key`. You will need this key to run Newsroom locally and to run tests.
+The master encryption key for Chapman can be found in Passpack. Place the key under `config/` in a new file called `secrets.yml.key`. You will need this key to run Newsroom locally and to run tests.
 
 ## Development
 ### Running local server
