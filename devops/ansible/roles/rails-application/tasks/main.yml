@@ -1,0 +1,5 @@
+---
+- include_tasks: app-user.yml
+- include_tasks: nginx-sites.yml
+- include_tasks: rails-packages.yml
+- include_tasks: capistrano.yml
