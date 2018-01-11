@@ -19,6 +19,7 @@
     - { role: tjarrett.selfsignedcertificate, become: yes, when: use_self_signed_cert }
     - { role: zzet.rbenv }
     - { role: geerlingguy.nginx, become: yes }
+    - { role: franklinkim.environment, become: yes }
     - { role: rails-application }
     - { role: nickhammond.logrotate, become: yes }
     - { role: geerlingguy.firewall, become: yes }
