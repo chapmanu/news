@@ -21,9 +21,9 @@ The master encryption key for Chapman can be found in Passpack. Place the key un
 
 ## Development
 ### Running local server
-To start the local server:
+To start the local server, use webrick (puma is not configured to run locally):
 
-    bundle exec rails s
+    bundle exec rails s webrick
 
 Send browser to http://localhost:3000
 
