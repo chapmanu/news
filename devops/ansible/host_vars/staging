@@ -11,4 +11,13 @@ environment_config:
 nginx_server_names:
   - localhost
   - "{{ app_name }}-staging.chapman.edu"
-  
+
+#
+# Role: geerlingguy.postgresql
+#
+postgresql_databases:
+  - name: newsroom_staging
+    owner: deploy
+postgresql_users:
+  - name: deploy
+    db: newsroom_staging
