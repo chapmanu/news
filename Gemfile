@@ -7,8 +7,9 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+# Use PostgreSQL as the database for Active Record
+gem 'pg', '0.18.2'
 
 # Use Puma as the app server
 # Version 3.10.0+ for this issue: https://github.com/seuros/capistrano-puma/issues/237
@@ -40,6 +41,11 @@ gem 'rubocop'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+
+  # Debugging gems
+  gem 'pry-rails'
+  gem 'pry-byebug'
+
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
