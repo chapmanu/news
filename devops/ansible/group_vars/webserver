@@ -153,3 +153,12 @@ firewall_allowed_tcp_ports:
   - "22"
   - "80"
   - "443"
+
+#
+# Role: geerlingguy.postgresql
+#
+postgresql_databases:
+  - name: newsroom_staging
+postgresql_users:
+  - name: deploy
+    db: newsroom_staging

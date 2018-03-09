@@ -7,10 +7,6 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
-
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -22,9 +18,12 @@
 
 .byebug_history
 
+# Ignore temp file generated when Ansible script fails mid-run
+/devops/ansible/webserver.retry
+
 # Sensitive Files
 # Copy dist versions on install.
 /config/database.yml
 
 # Ignore encrypted secrets key file.
-config/secrets.yml.key
+/config/secrets.yml.key
