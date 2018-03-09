@@ -28,10 +28,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+
+# Authentication Gems
+gem 'net-ldap'
+gem 'devise'
 
 # Rubocop must be available in all groups, otherwise throws "LoadError: cannot load such file -- rubocop/rake_task" on deploy
 # See same issue in Imposter: https://github.com/chapmanu/imposter/issues/4
@@ -45,6 +45,7 @@ group :development, :test do
   # Debugging gems
   gem 'pry-rails'
   gem 'pry-byebug'
+  gem 'better_errors'
 
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
