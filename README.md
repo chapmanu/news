@@ -34,7 +34,7 @@ All tests:
 
 Individual test file:
 
-    bundle exec rake test TEST=test/controllers/ping_controller_test.rb
+    bundle exec rake test TEST=test/controllers/home_controller_test.rb
 
 ### Server Provisioning
 Webserver provisioning is automated with [Ansible](https://www.ansible.com/). Requires minimum major Ansible version 2.4. See [Ansible page](https://wimops.chapman.edu/wiki/Ansible#Installation) on WimOps Wiki for installation instructions.
