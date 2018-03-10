@@ -46,6 +46,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'better_errors'
+  gem 'binding_of_caller'
 
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
