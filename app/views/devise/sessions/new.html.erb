@@ -2,28 +2,10 @@
   <h1><a href="https://chapman.edu/" title="Chapman University">Chapman Newsroom</a></h1>
   <div id="welcome"><h2>Welcome!</h2><p class="welcome">Please enter your ChapmanU User ID and password.</p></div>
 
-  <% unless flash[:notice].blank? %>
-    <div id="login_notice">
-      <strong>Notice</strong>: <%= flash[:notice] %> <a href="https://webfarm.chapman.edu/AccountManagement/" title="Password Lost and Found">Did you lose your password</a>?<br>
-    </div>
-  <% end %>
-
-  <% unless flash[:alert].blank? %>
-    <div id="login_error">
-      <% if flash[:alert] == "Invalid identity info" %>
-        <p><strong>ERROR</strong>: There is a problem with your account, please contact the service desk.</p>
-        <p>Online: <a href="http://servicedesk.chapman.edu">servicedesk.chapman.edu</a></p>
-        <p>Email: <a href="mailto:servicedesk@chapman.edu%20">servicedesk@chapman.edu</a></p>
-      <% else %>
-        <strong>ERROR</strong>: <%= flash[:alert] %> <a href="https://idm.chapman.edu/" title="Password Lost and Found">Did you lose your password</a>?<br>
-      <% end %>
-    </div>
-  <% end %>
-
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <p>
-      <%= f.label :user_name, "Username" %><br />
-      <%= f.text_field :user_name, autofocus: true, size: 20 %>
+      <%= f.label :username, "Username" %><br />
+      <%= f.text_field :username, autofocus: true, size: 20 %>
     </p>
 
     <p>
@@ -36,6 +18,5 @@
     <p id="nav">
       <a href="https://idm.chapman.edu/" title="Password Lost and Found">Lost your password?</a>
     </p>
-
   <% end %>
 </div>
