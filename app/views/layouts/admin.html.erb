@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <%= favicon_link_tag 'favicon.ico' %>
+
+    <%= csrf_meta_tags %>
+    <script type="text/javascript" src="//use.typekit.net/eyn5jyy.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
