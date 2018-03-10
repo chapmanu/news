@@ -1,16 +1,14 @@
 <div id="login">
   <h1><a href="https://chapman.edu/" title="Chapman University">Chapman Newsroom</a></h1>
-  <div id="welcome"><h2>Welcome!</h2><p class="welcome">Please enter your ChapmanU User ID and password.</p></div>
+  <div id="welcome"><h2>Welcome!</h2><p class="welcome">Please enter your ChapmanU username and password.</p></div>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <p>
-      <%= f.label :username, "Username" %><br />
-      <%= f.text_field :username, autofocus: true, size: 20 %>
+      <%= f.text_field :username, autofocus: true, size: 20, placeholder: "Username" %>
     </p>
 
     <p>
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
+      <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
     </p>
 
     <p class="submit"><%= f.submit "Log in", class: 'submit large' %></p>

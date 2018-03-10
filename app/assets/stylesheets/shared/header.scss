@@ -1,6 +1,3 @@
-@import "variables";
-@import "mixins";
-
 /* BODY
 ---------------------------------------- */
 //make room at top of page for omni-nav
@@ -16,7 +13,7 @@ html.omni-nav-v2 {
   position: fixed;
   width: 100%;
   top: 0;
-  font-family: "futura-pt", verdana, sans-serif;
+  font-family: $font-stack-title;
 
   // Needs to be high enough to put off-canvas-nav on top of anything else on page.
   z-index: 1000;

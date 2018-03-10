@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html class="<%=controller.controller_name %>">
   <head>
     <title><%= yield(:title) %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <%= favicon_link_tag 'favicon.ico' %>
+    <%= stylesheet_link_tag "admin" %>
 
     <%= csrf_meta_tags %>
     <script type="text/javascript" src="//use.typekit.net/eyn5jyy.js"></script>
