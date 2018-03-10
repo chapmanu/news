@@ -15,61 +15,53 @@ html.sessions {
       margin: 10px auto 0 auto;
       padding: 25px 40px;
       width: 375px;
-    }
 
-    @media only screen and (min-width: 680px) {
-      div#login {
+      @media only screen and (min-width: 680px) {
         margin-top: 115px;
       }
-    }
 
-    @media only screen and (min-width: 680px) {
-      div#login {
-        margin-top: 115px;
+      h1 {
+        text-align: center;
+        margin: 0;
+
+        a {
+          background-image: image-url("chapman-horizontal-logo.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100%;
+          display: inline-block;
+          height: 63px;
+          margin-bottom: 10px;
+          padding-bottom: 0;
+          text-indent: -9999px;
+          width: 233px;
+        }
       }
-    }
 
-    div#login h1 {
-      text-align: center;
-      margin: 0;
-    }
+      h2 {
+        color: #353430;
+        font-family: $font-stack-heading;
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
 
-    div#login h1 a {
-      background-image: image-url("chapman-horizontal-logo.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100%;
-      display: inline-block;
-      height: 63px;
-      margin-bottom: 10px;
-      padding-bottom: 0;
-      text-indent: -9999px;
-      width: 233px;
-    }
+      p.welcome {
+        font-size: 14px;
+        font-style: italic;
+        line-height: 1.2;
+        margin: 0;
+        padding: 0;
+      }
 
-    div#login div#welcome {
-      margin: 5px 10px 20px 10px;
-    }
+      label {
+        color: #62605a;
+        font-size: 14px;
+      }
 
-    div#login h2 {
-      color: #353430;
-      font-family: $font-stack-heading;
-      font-size: 26px;
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
-
-    div#login p.welcome {
-      font-size: 14px;
-      font-style: italic;
-      line-height: 1.2;
-      margin: 0;
-      padding: 0;
-    }
-
-    div#login label {
-      color: #62605a;
-      font-size: 14px;
+      div#welcome {
+        margin: 5px 10px 20px 10px;
+      }
     }
 
     input {
@@ -84,13 +76,13 @@ html.sessions {
       padding: 12px;
       outline: none;
       width: 100%;
-    }
 
-    input:focus {
-      border-color: #D3A6AE;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      color: #353430;
+      &:focus {
+        border-color: #D3A6AE;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        color: #353430;
+      }
     }
 
     input#user_username {
@@ -99,14 +91,14 @@ html.sessions {
       background-position: 10px 10px;
       background-size: 21px 21px;
       padding-left: 35px;
-    }
 
-    input#user_username:focus {
-      background-image: image-url("user_id_focus.png");
-      background-repeat: no-repeat;
-      background-position: 10px 10px;
-      background-size: 21px 21px;
-      padding-left: 35px;
+      &:focus {
+        background-image: image-url("user_id_focus.png");
+        background-repeat: no-repeat;
+        background-position: 10px 10px;
+        background-size: 21px 21px;
+        padding-left: 35px;
+      }
     }
 
     input#user_password {
@@ -115,50 +107,14 @@ html.sessions {
       background-position: 10px 10px;
       background-size: 21px 21px;
       padding-left: 35px;
-    }
 
-    input#user_password:focus {
-      background-image: image-url("user_pass_focus.png");
-      background-repeat: no-repeat;
-      background-position: 10px 10px;
-      background-size: 21px 21px;
-      padding-left: 35px;
-    }
-
-    div#login form .forgetmenot {
-      font-size: 12px;
-      margin-bottom: 20px;
-      margin-top: -6px;
-    }
-
-    div#login form .forgetmenot label {
-      color: #62605a;
-    }
-
-    form .forgetmenot input[type=checkbox] {
-      -webkit-appearance: none;
-      background: #fbfbfb;
-      border: 1px solid #bbb;
-      color: $chapman-red;
-      clear: none;
-      cursor: pointer;
-      display: inline-block;
-      height: 25px;
-      line-height: 0;
-      margin: -4px 4px 0 0;
-      position: relative;
-      text-align: middle;
-      vertical-align: middle;
-      width: 25px;
-    }
-
-    input[type=checkbox]:checked:before {
-      color: $chapman-red;
-      content: '✔';
-      font-size: 24px;
-      left: 2px;
-      position: absolute;
-      top: 10px;
+      &:focus {
+        background-image: image-url("user_pass_focus.png");
+        background-repeat: no-repeat;
+        background-position: 10px 10px;
+        background-size: 21px 21px;
+        padding-left: 35px;
+      }
     }
 
     input.submit {
@@ -167,54 +123,43 @@ html.sessions {
       border-radius: 2px;
       -webkit-box-shadow: none;
       box-shadow: none;
-      color: white;
+      color: $white;
       font-size: 14px;
+
+      &:active {
+        background: #C92741;
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+
+      &:hover {
+        background: $link-red-hover;
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+
+      &.large {
+        width: 100%;
+        margin-bottom: 20px;
+      }
     }
-    input.submit:active {
-      background: #C92741;
-      border: none;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-    }
-    input.submit:hover {
-      background: $link-red-hover;
-      border: none;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-    }
-    input.submit.large {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-    #nav {
+
+    #footer {
       float: right;
       font-size: 12px;
       margin: 35px -40px 0;
       padding: 0;
-    }
 
-    #nav a {
-      color: $chapman-red;
-    }
+      a {
+        text-decoration: none;
+        color: $chapman-red;
 
-    #nav a:hover {
-      color: $link-red-hover;
-    }
-
-    #backtoblog {
-      float: left;
-      margin: 35px -40px 0;
-      padding: 0;
-    }
-
-    #backtoblog, #backtoblog a {
-      color: #9A9996;
-      font-size: 12px;
-      font-style: italic;
-    }
-
-    #backtoblog a:hover {
-      color: $chapman-red;
+        &:hover {
+          color: $link-red-hover;
+        }
+      }
     }
 
     .message {
@@ -226,7 +171,7 @@ html.sessions {
 
     #login_notice,
     #login_error {
-      background: #FFF;
+      background: $white;
       border-left: 4px solid #dd3d36;
       box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
       margin-left: 0;
