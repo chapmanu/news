@@ -29,7 +29,7 @@ module Devise
           params[:user][:password]
         end
 
-        # Accomodates both username and email as input
+        # Accommodates both username and email as input
         def username
           /^([\w]*)@?.*$/.match(params[:user][:username].downcase)[1]
         end
