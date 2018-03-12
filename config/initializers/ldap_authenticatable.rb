@@ -3,22 +3,21 @@ module Devise
     class LdapAuthenticatable < Authenticatable
 
       def authenticate!
-        if valid_credentials?("#{username}@chapman.edu", password)
+        if valid_credentials?(username, password)
           success! User.create_or_update_from_active_directory(username)
         else
           fail(:invalid_login)
         end
-      rescue UnexpectedActiveDirectoryFormat
-        fail(:invalid_login)
-      rescue ChapmanIdentityNotFound
-        user = User.where(email: "#{username}@chapman.edu")
-        identity_info = User.lookup_in_active_directory(username)
-
+      # User credentials were correct, but AD either did not find them
+      # or they're missing: email, username, first or lastname
+      rescue MissingIdentityInfo, ChapmanIdentityNotFound
         fail(:invalid_identity_info)
       end
 
       private
-        def valid_credentials?(email, password)
+        # Must be email address, username alone doesn't work
+        def valid_credentials?(username, password)
+          email = "#{username}@chapman.edu"
           ldap = Net::LDAP.new
           ldap.host = 'bind.chapman.edu'
           ldap.port = 389
@@ -26,16 +25,13 @@ module Devise
           password.present? && email.present? && ldap.bind
         end
 
-        def email
-          params[:user][:email]
-        end
-
         def password
           params[:user][:password]
         end
 
+        # Accomodates both username and email as input
         def username
-          /^([\w]*)@?.*$/.match(email.downcase)[1]
+          /^([\w]*)@?.*$/.match(params[:user][:username].downcase)[1]
         end
     end
   end

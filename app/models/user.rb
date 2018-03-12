@@ -1,6 +1,7 @@
 class User < ApplicationRecord
-  devise :database_authenticatable, :trackable
+  devise :database_authenticatable, :rememberable, :trackable
   include ChapmanIdentityLookups
+  attr_accessor :encrypted_password # used by Devise for :database_authenticatable
 
   ############################
   # ::: INSTANCE METHODS ::: #
