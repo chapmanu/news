@@ -12,7 +12,7 @@ html.sessions {
     div#login {
       background: $white;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
-      margin: 10px auto 0 auto;
+      margin: 65px auto 65px auto;
       padding: 25px 40px;
       width: 375px;
 
@@ -125,6 +125,7 @@ html.sessions {
       box-shadow: none;
       color: $white;
       font-size: 14px;
+      cursor: pointer;
 
       &:active {
         background: #C92741;
@@ -162,14 +163,6 @@ html.sessions {
       }
     }
 
-    .message {
-      background-color: #F5F5F5;
-      border-left: 4px solid #02bac1;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-    }
-
-    #login_notice,
     #login_error {
       background: $white;
       border-left: 4px solid #dd3d36;
@@ -178,8 +171,33 @@ html.sessions {
       padding: 12px;
     }
 
-    #login_notice {
-      border-left: 4px solid #FFC200;
+    div#login form .remember-me {
+      margin-bottom: 20px;
+
+      input[type=checkbox] {
+        -webkit-appearance: none;
+        background: #fbfbfb;
+        border: 1px solid #bbb;
+        color: $chapman-red;
+        clear: none;
+        cursor: pointer;
+        display: inline-block;
+        height: 25px;
+        line-height: 0;
+        margin: -4px 4px 0 0;
+        position: relative;
+        vertical-align: middle;
+        width: 25px;
+      }
+
+      input[type=checkbox]:checked:before {
+        color: $chapman-red;
+        content: '✔';
+        font-size: 24px;
+        left: 2px;
+        position: absolute;
+        top: 10px;
+      }
     }
   }
 }
