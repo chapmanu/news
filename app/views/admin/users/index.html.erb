@@ -1,4 +1,23 @@
-<h1>Users</h1>
-<p>
-  <%= @users.count %>
-</p>
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <th scope="row"><%= user.id %></th>
+        <td><%= user.full_name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.role_label %></td>
+        <td><%= link_to "Details", user_path(user), { "aria-label" => "Show user", :class => "btn btn-outline-dark" } %></td>
+        <td><%= link_to "Edit", edit_user_path(user), { "aria-label" => "Edit user", :class => "btn btn-outline-dark" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -10,4 +10,8 @@ class User < ApplicationRecord
   def full_name
     "#{first_name} #{last_name}".strip
   end
+
+  def role_label
+    role.nil? ? "None" : role
+  end
 end
