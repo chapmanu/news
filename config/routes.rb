@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   # Need to list these individually to remove admin_ prefix
   get 'admin/users/:id',      to: 'admin/users#show', as: 'user'
   get 'admin/users/:id/edit', to: 'admin/users#edit', as: 'edit_user'
+  patch 'admin/users/:id',    to: 'admin/users#update'
 
   # Root
   root 'home#index'

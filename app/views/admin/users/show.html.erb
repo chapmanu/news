@@ -10,9 +10,14 @@
       <strong>Username:</strong> <%= @user.username %>
     </p>
     <p>
+      <strong># of Sign-ins:</strong> <%= @user.sign_in_count %>
+    </p>
+    <p>
       <strong>Role:</strong> <%= @user.role_label %>
     </p>
-    <%= link_to "Back", admin_path, { "aria-label" => "Back to all users", :class => "btn btn-outline-dark" } %>
+
     <%= link_to "Edit User", edit_user_path(@user), { "aria-label" => "Edit this user", :class => "btn btn-dark" } %>
+    <br>
+    <%= link_to "Back", admin_path, { "aria-label" => "Back to all users", :class => "btn btn-outline-dark" } %>
   </div>
 </div>

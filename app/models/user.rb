@@ -12,6 +12,6 @@ class User < ApplicationRecord
   end
 
   def role_label
-    role.nil? ? "None" : role
+    role.include?("admin") ? "Administrator" : "None"
   end
 end

@@ -1,0 +1,24 @@
+<div class="card">
+  <h5 class="card-header">
+    Editing User: <%= @user.username %>
+  </h5>
+  <div class="card-body">
+    <p>
+      <strong>Name:</strong> <%= @user.full_name %>
+    </p>
+    <p>
+      <strong>Email:</strong> <%= @user.email %>
+    </p>
+    <p>
+      <strong>Username:</strong> <%= @user.username %>
+    </p>
+
+    <%= form_for @user do |f| %>
+      <%= f.select :role, options_for_select([["None", nil], ["Administrator", "admin"]], @user.role), {}, { :class => "form-control" } %>
+      <br>
+      <%= f.submit "Save", class: "btn btn-dark" %>
+    <% end %>
+
+    <%= link_to "Cancel", admin_path, class: "btn btn-outline-dark" %>
+  </div>
+</div>
