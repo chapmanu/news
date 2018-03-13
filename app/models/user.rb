@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  devise :database_authenticatable, :rememberable, :trackable
   include ChapmanIdentityLookups
+  devise :database_authenticatable, :rememberable, :trackable
   attr_accessor :encrypted_password # used by Devise for :database_authenticatable
 
   ############################
@@ -12,6 +12,6 @@ class User < ApplicationRecord
   end
 
   def role_label
-    role.include?("admin") ? "Administrator" : "None"
+    (role == "admin") ? "Administrator" : "None"
   end
 end

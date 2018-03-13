@@ -25,15 +25,16 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 # Bootstrap
-gem 'jquery-rails'
-gem 'bootstrap', '~> 4.0.0'
 gem 'autoprefixer-rails'
+gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
 
 # Authentication Gems
-gem 'net-ldap'
 gem 'devise'
+gem 'net-ldap'
 
-# Rubocop must be available in all groups, otherwise throws "LoadError: cannot load such file -- rubocop/rake_task" on deploy
+# Rubocop must be available in all groups, otherwise throws
+# "LoadError: cannot load such file -- rubocop/rake_task" on deploy
 # See same issue in Imposter: https://github.com/chapmanu/imposter/issues/4
 # Static Code Analyzer
 gem 'rubocop'
@@ -43,10 +44,10 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 
   # Debugging gems
-  gem 'pry-rails'
-  gem 'pry-byebug'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'pry-byebug'
+  gem 'pry-rails'
 
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
