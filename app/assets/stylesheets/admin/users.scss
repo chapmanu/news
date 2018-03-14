@@ -1,8 +1,10 @@
+// Random bootstrap style overrides fo User views (admin only)
 select#user_role {
   width: 200px;
 }
 
-a.btn {
+a.btn,
+input.btn {
   margin: 5px 0;
 }
 

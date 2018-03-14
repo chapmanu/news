@@ -15,7 +15,7 @@
         <td><%= user.full_name %></td>
         <td><%= user.email %></td>
         <td><%= user.role_label %></td>
-        <td><%= link_to "Details", user_path(user), { "aria-label" => "Show user", :class => "btn btn-dark" } %></td>
+        <td><%= link_to "Details", user_path(user), { "aria-label" => "Details for user", :class => "btn btn-dark" } %></td>
         <td><%= link_to "Edit", edit_user_path(user), { "aria-label" => "Edit user", :class => "btn btn-dark" } %></td>
       </tr>
     <% end %>
