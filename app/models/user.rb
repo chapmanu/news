@@ -12,6 +12,10 @@ class User < ApplicationRecord
   end
 
   def role_label
-    (role == "admin") ? "Administrator" : "None"
+    role == "admin" ? "Administrator" : "None"
+  end
+
+  def admin?
+    role == "admin"
   end
 end

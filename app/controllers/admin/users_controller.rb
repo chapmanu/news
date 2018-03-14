@@ -2,6 +2,7 @@ module Admin
   class UsersController < ApplicationController
     layout 'admin'
     before_action :set_user, only: %i[show edit update]
+    before_action :verify_admin
 
     # GET /users
     def index
@@ -39,6 +40,10 @@ module Admin
         :last_name,
         :role
       )
+    end
+
+    def verify_admin
+      render '/admin/permission_denied' unless current_user.try(:admin?)
     end
   end
 end

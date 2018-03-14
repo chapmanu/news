@@ -14,7 +14,7 @@
 
   <!-- Bootstrap Navigation Bar -->
   <%# only show navbar if a user is logged in and has permissions %>
-  <% if current_user %>
+  <% if current_user && current_user.admin? %>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Newsroom Admin</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

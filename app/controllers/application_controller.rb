@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(*)
-    # if admin
+    # User controller checks that user has admin permissions
     admin_path
   end
 end
