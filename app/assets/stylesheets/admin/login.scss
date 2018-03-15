@@ -2,9 +2,34 @@
 html.sessions {
   height: 100%;
 
+  // Default chapman styles for links
+  a {
+    color: $chapman-red;
+    text-decoration: none;
+    &:visited {
+      color: $chapman-red;
+      border-bottom: none;
+    }
+    &:hover {
+      color: $link-red-hover;
+      border-bottom: none;
+      text-decoration: underline;
+    }
+    &:focus {
+      outline: thin dotted;
+    }
+    &:active {
+      color: $link-red-active;
+    }
+    &:hover, &:active {
+      outline: 0;
+      text-decoration: none;
+    }
+  }
+
   body {
     background: #ECEBE5;
-    color: #444;
+    color: #444444;
     font-family: $default-fonts;
     font-size: 13px;
     line-height: 1.4em;
@@ -55,7 +80,7 @@ html.sessions {
       }
 
       label {
-        color: #62605a;
+        color: #62605A;
         font-size: 14px;
       }
 
@@ -66,10 +91,9 @@ html.sessions {
 
     input {
       background: #FBFBFB;
-      border: 1px solid #BBB;
+      border: 1px solid #BBBBBB;
       box-shadow: none;
       box-sizing: border-box;
-      color: #9A9996;
       font-size: 14px;
       line-height: 1;
       margin: 2px 6px 16px 0;
@@ -128,7 +152,7 @@ html.sessions {
       cursor: pointer;
 
       &:active {
-        background: #C92741;
+        background: $link-red-active;
         border: none;
         -webkit-box-shadow: none;
         box-shadow: none;
@@ -152,22 +176,13 @@ html.sessions {
       font-size: 12px;
       margin: 35px -40px 0;
       padding: 0;
-
-      a {
-        text-decoration: none;
-        color: $chapman-red;
-
-        &:hover {
-          color: $link-red-hover;
-        }
-      }
     }
 
     #login_error {
       background: $white;
-      border-left: 4px solid #dd3d36;
+      border-left: 4px solid red;
       box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-      margin-left: 0;
+      margin-bottom: 20px;
       padding: 12px;
     }
 
@@ -176,8 +191,8 @@ html.sessions {
 
       input[type=checkbox] {
         -webkit-appearance: none;
-        background: #fbfbfb;
-        border: 1px solid #bbb;
+        background: #FBFBFB;
+        border: 1px solid #BBBBBB;
         color: $chapman-red;
         clear: none;
         cursor: pointer;

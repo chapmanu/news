@@ -29,6 +29,9 @@ div.permission-denied {
     &:focus {
       outline: thin dotted;
     }
+    &:active {
+      color: $link-red-active;
+    }
     &:hover, &:active {
       outline: 0;
       text-decoration: none;
