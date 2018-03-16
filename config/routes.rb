@@ -1,18 +1,22 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :users
 
-  # Home Page
+  ############################
+  # Home
+  ############################
   get '/', to: 'home#index'
   get 'home', to: 'home#index'
 
-  # API Routes
-  # https://collectiveidea.com/blog/archives/2013/06/13/building-awesome-rails-apis-part-1
-  # http://railscasts.com/episodes/350-rest-api-versioning?view=asciicast
-  namespace :api, defaults: {format: 'json'} do
-    namespace :v1 do
-      get 'ping', to: 'ping#index'
-    end
-  end
+  ############################
+  # Admin Routes
+  ############################
+  get 'admin', to: 'admin/users#index'
+
+  # Need to list these individually to remove admin_ prefix
+  get 'admin/users/:id',      to: 'admin/users#show', as: 'user'
+  get 'admin/users/:id/edit', to: 'admin/users#edit', as: 'edit_user'
+  patch 'admin/users/:id',    to: 'admin/users#update'
 
   # Root
   root 'home#index'

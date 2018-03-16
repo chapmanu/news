@@ -1,0 +1,59 @@
+@import "base/*";
+@import "admin/*";
+@import "bootstrap";
+
+div.permission-denied {
+  background: $white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+  margin: 65px auto 65px auto;
+  padding: 25px 40px;
+  width: 375px;
+
+  @media only screen and (min-width: 680px) {
+    margin-top: 115px;
+  }
+
+  // Default Chapman styles for links  
+  a {
+    color: $chapman-red;
+    text-decoration: none;
+    &:visited {
+      color: $chapman-red;
+      border-bottom: none;
+    }
+    &:hover {
+      color: $link-red-hover;
+      border-bottom: none;
+      text-decoration: underline;
+    }
+    &:focus {
+      outline: thin dotted;
+    }
+    &:active {
+      color: $link-red-active;
+    }
+    &:hover, &:active {
+      outline: 0;
+      text-decoration: none;
+    }
+  }
+
+  // Chapman logo
+  h1 {
+    text-align: center;
+    margin: 0;
+
+    a {
+      background-image: image-url("chapman-horizontal-logo.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      display: inline-block;
+      height: 63px;
+      margin-bottom: 10px;
+      padding-bottom: 0;
+      text-indent: -9999px;
+      width: 233px;
+    }
+  }
+}

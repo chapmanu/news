@@ -1,4 +1,4 @@
-server "news-staging.chapman.edu", user: "deploy", roles: %w{web}
+server "newss-mkt-wb01.chapman.edu", user: "deploy", roles: %w{app db web postgres}
 
 # The git branch for staging
 def current_git_branch

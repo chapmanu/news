@@ -1,0 +1,122 @@
+#footer {
+  background: $dark-gray;
+  color: $white;
+  height: auto;
+  margin-top: 60px; // between footer and body content
+  overflow: hidden;
+  padding: 30px 0;
+
+  .footer-container {
+    margin: 0 30px;
+    
+    .section {
+      @include breakpoint($bp-tablet) {
+        float: right;
+
+        // Address div stays left
+        &.address {
+          float: left;
+        }
+
+        // Within the section div, the two divs need to stack horizontally also
+        .footer-menu,
+        .footer-social {
+          margin-bottom: 0;
+          float: left;
+        }
+      }
+
+      ul.social-list,
+      ul.menu-list {
+        list-style-type: none;
+      }
+
+      .footer-title h1,
+      .footer-subtitle h2 {
+        font-family: $font-stack-heading;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+
+      // List item links and static address text
+      .menu-list li a,
+      .address-text p,
+      .copyright {
+        color: $white;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .footer-address {
+        margin-bottom: 20px;
+
+        .footer-title {
+          line-height: 44px;
+
+          h1 {
+            font-size: 40px;
+          }
+        }
+
+        // Space between address and copyright
+        .address-text {
+          margin-bottom: 10px;
+        }
+      }
+
+      .footer-menu {
+        // Space between last list item and social icons
+        margin-bottom: 20px;
+
+        // Space between list and social icons when horizontally stacked
+        @include breakpoint($bp-tablet) {
+          padding-right: 60px;
+        }
+
+        .footer-subtitle {
+          line-height: 28px;
+
+          h2 {
+            font-size: 24px;
+          }
+        }
+
+        ul.menu-list li {
+          margin: 0 0 4px 0;
+        }
+      }
+
+      .footer-social {
+        ul.social-list {
+          // Set static width to force list items onto 2 equal lines of 4
+          width: 200px;
+          display: inline-block;
+
+          li {
+            display: inline-block;
+            float: left;
+            text-align: center;
+            width: 35px;
+            border: none;
+            // Has to be 0px on the left in order to line up with other footer content
+            margin: 0 15px 15px 0;
+
+            a {
+              display: block;
+              font-size: 0px;
+              line-height: 35px;
+              border: 1px solid $white;
+            }
+
+            svg {
+              width: $square-icon-size;
+              height: $square-icon-size;
+              vertical-align: middle;
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,218 @@
+// Styles for the login page
+html.sessions {
+  height: 100%;
+
+  // Default chapman styles for links
+  a {
+    color: $chapman-red;
+    text-decoration: none;
+    &:visited {
+      color: $chapman-red;
+      border-bottom: none;
+    }
+    &:hover {
+      color: $link-red-hover;
+      border-bottom: none;
+      text-decoration: underline;
+    }
+    &:focus {
+      outline: thin dotted;
+    }
+    &:active {
+      color: $link-red-active;
+    }
+    &:hover, &:active {
+      outline: 0;
+      text-decoration: none;
+    }
+  }
+
+  body {
+    background: #ECEBE5;
+    color: #444444;
+    font-family: $default-fonts;
+    font-size: 13px;
+    line-height: 1.4em;
+
+    div#login {
+      background: $white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+      margin: 65px auto 65px auto;
+      padding: 25px 40px;
+      width: 375px;
+
+      @media only screen and (min-width: 680px) {
+        margin-top: 115px;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 0;
+
+        a {
+          background-image: image-url("chapman-horizontal-logo.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100%;
+          display: inline-block;
+          height: 63px;
+          margin-bottom: 10px;
+          padding-bottom: 0;
+          text-indent: -9999px;
+          width: 233px;
+        }
+      }
+
+      h2 {
+        color: #353430;
+        font-family: $font-stack-heading;
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+
+      p.welcome {
+        font-size: 14px;
+        font-style: italic;
+        line-height: 1.2;
+        margin: 0;
+        padding: 0;
+      }
+
+      label {
+        color: #62605A;
+        font-size: 14px;
+      }
+
+      div#welcome {
+        margin: 5px 10px 20px 10px;
+      }
+    }
+
+    input {
+      background: #FBFBFB;
+      border: 1px solid #BBBBBB;
+      box-shadow: none;
+      box-sizing: border-box;
+      font-size: 14px;
+      line-height: 1;
+      margin: 2px 6px 16px 0;
+      padding: 12px;
+      outline: none;
+      width: 100%;
+
+      &:focus {
+        border-color: #D3A6AE;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        color: #353430;
+      }
+    }
+
+    input#user_username {
+      background-image: image-url("user_id.png");
+      background-repeat: no-repeat;
+      background-position: 10px 10px;
+      background-size: 21px 21px;
+      padding-left: 35px;
+
+      &:focus {
+        background-image: image-url("user_id_focus.png");
+        background-repeat: no-repeat;
+        background-position: 10px 10px;
+        background-size: 21px 21px;
+        padding-left: 35px;
+      }
+    }
+
+    input#user_password {
+      background-image: image-url("user_pass.png");
+      background-repeat: no-repeat;
+      background-position: 10px 10px;
+      background-size: 21px 21px;
+      padding-left: 35px;
+
+      &:focus {
+        background-image: image-url("user_pass_focus.png");
+        background-repeat: no-repeat;
+        background-position: 10px 10px;
+        background-size: 21px 21px;
+        padding-left: 35px;
+      }
+    }
+
+    input.submit {
+      background: $chapman-red;
+      border: none;
+      border-radius: 2px;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: $white;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:active {
+        background: $link-red-active;
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+
+      &:hover {
+        background: $link-red-hover;
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+
+      &.large {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    #footer {
+      float: right;
+      font-size: 12px;
+      margin: 35px -40px 0;
+      padding: 0;
+    }
+
+    #login_error {
+      background: $white;
+      border-left: 4px solid red;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 12px;
+    }
+
+    div#login form .remember-me {
+      margin-bottom: 20px;
+
+      input[type=checkbox] {
+        -webkit-appearance: none;
+        background: #FBFBFB;
+        border: 1px solid #BBBBBB;
+        color: $chapman-red;
+        clear: none;
+        cursor: pointer;
+        display: inline-block;
+        height: 25px;
+        line-height: 0;
+        margin: -4px 4px 0 0;
+        position: relative;
+        vertical-align: middle;
+        width: 25px;
+      }
+
+      input[type=checkbox]:checked:before {
+        color: $chapman-red;
+        content: '✔';
+        font-size: 24px;
+        left: 2px;
+        position: absolute;
+        top: 10px;
+      }
+    }
+  }
+}

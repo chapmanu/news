@@ -1,0 +1,25 @@
+// Breakpoints
+$bp-mobile: 320px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-large-desktop: 1190px;
+
+// Header
+$primary-nav-border-color: #8A8A8A;
+$primary-nav-dropdown-width: 200px;
+$primary-nav-height: 60px;
+$square-icon-size: 16px;
+$base-spacing: 16px;
+$base-line-height: 32px;
+
+// Default styles
+$dark-gray:        #2F2F2F;
+$white:            #FFFFFF;
+$black:            #000000;
+$chapman-red:      #A50034;
+$link-red-hover:   #C8003F;
+$link-red-active:  #88002B;
+
+$default-fonts:       arial, sans-serif;
+$font-stack-title:    "futura-pt", arial, sans-serif;
+$font-stack-heading:  "futura-pt-condensed", arial, sans-serif;
