@@ -57,6 +57,23 @@ RSpec.describe Admin::UsersController, type: :controller do
       expect(response.body).to have_content "cchapman@chapman.edu"
     end
 
+    it 'can edit user roles' do
+      # Arrange
+      test_admin = users(:admin)
+      login_as(test_admin)
+      charles = User.find_by(username: "cchapman")
+
+      # Make sure role is nil to start
+      expect(charles.role).to be_nil
+
+      # Act
+      patch :update, params: { id: charles, user: { role: "admin" } }
+      charles.reload
+
+      # Assert
+      expect(charles.role).to eq("admin")
+    end
+
     it 'can see user details' do
       # Arrange
       test_admin = users(:admin)
