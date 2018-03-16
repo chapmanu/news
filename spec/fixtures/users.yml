@@ -1,0 +1,20 @@
+admin:
+  first_name: Billy
+  last_name: Goat
+  role: admin
+  email: bgoat@chapman.edu
+  username:
+
+non_admin:
+  first_name: Not
+  last_name: Admin
+  role:
+  email: not_admin@chapman.edu
+  username:
+
+charles:
+  first_name: Charles
+  last_name: Chapman
+  role:
+  email: cchapman@chapman.edu
+  username: cchapman

@@ -4,6 +4,14 @@ class User < ApplicationRecord
   attr_accessor :encrypted_password # used by Devise for :database_authenticatable
 
   ############################
+  # :::   VALIDATIONS    ::: #
+  ############################
+
+  validates :first_name,  presence: { message: 'must be present.' }
+  validates :last_name,   presence: { message: 'must be present.' }
+  validates :email,       presence: { message: 'must be present.' }
+
+  ############################
   # ::: INSTANCE METHODS ::: #
   ############################
 
