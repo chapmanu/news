@@ -14,7 +14,7 @@ ActiveRecord::Migration.maintain_test_schema!
 WebMock.disable_net_connect!(:allow_localhost => true)
 
 RSpec.configure do |config|
-  config.include Devise::Test::ControllerHelpers
+  config.include Devise::Test::ControllerHelpers, type: :controller
 
   config.color = :enabled
 
@@ -28,7 +28,7 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 
   config.before(:each, js: true) do
-    # block these unnecessary external requests to speed up tests and prevent false failures
+    # block unnecessary external requests to speed up tests and prevent false failures
     page.driver.browser.url_blacklist = ["http://use.typekit.net"]
   end
 

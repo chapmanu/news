@@ -53,6 +53,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
 
+  gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'webmock'
 end
