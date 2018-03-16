@@ -1,5 +1,8 @@
 require 'rails_helper'
 
+# Rubocop flags this test as a block that's too long
+# Ignore that error in this file
+# rubocop:disable Metrics/BlockLength
 RSpec.describe User, type: :model do
   fixtures :users
 
