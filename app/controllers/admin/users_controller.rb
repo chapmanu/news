@@ -6,7 +6,7 @@ module Admin
 
     # GET /users
     def index
-      @users = User.all
+      @users = User.all.sort_by(&:last_name)
     end
 
     # GET /users/1
